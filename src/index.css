@@ -1,1 +1,57 @@
 @import "tailwindcss";
+.hero-swiper .swiper-button-prev,
+.hero-swiper .swiper-button-next {
+  color: white;
+  width: 40px;
+  height: 40px;
+}
+
+.hero-swiper .swiper-button-prev::after,
+.hero-swiper .swiper-button-next::after {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.hero-swiper .swiper-pagination {
+  bottom: 28px !important;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+  width: 62px;
+  height: 10px;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+  background: white;
+}
+.product-hero-swiper .swiper-button-prev,
+.product-hero-swiper .swiper-button-next {
+  color: white;
+  width: 40px;
+  height: 40px;
+}
+
+.product-hero-swiper .swiper-button-prev::after,
+.product-hero-swiper .swiper-button-next::after {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.product-hero-swiper .swiper-pagination {
+  bottom: 28px !important;
+}
+
+.product-hero-swiper .swiper-pagination-bullet {
+  width: 62px;
+  height: 10px;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.product-hero-swiper .swiper-pagination-bullet-active {
+  background: white;
+}
