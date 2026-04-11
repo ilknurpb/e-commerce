@@ -1,13 +1,15 @@
+
+
 function ProductCard({ product }) {
   return (
     <div className="flex flex-col items-center text-center">
 
       {/* IMAGE */}
-      <div className="mb-6 h-[360px] w-[239px] overflow-hidden bg-[#F5F5F5]">
+      <div className="mb-6 aspect-[2/3] w-full overflow-hidden bg-[#F5F5F5] md:w-[239px]">
         <img
           src={product.image}
           alt={product.title}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-top"
         />
       </div>
 

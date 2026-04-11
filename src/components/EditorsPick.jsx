@@ -1,5 +1,5 @@
 
-
+import { Link } from "react-router-dom";
 
 const EditorsPick = () => {
   const editorsPick = [
@@ -52,12 +52,12 @@ const EditorsPick = () => {
             <span className="absolute bottom-4 left-4 bg-white px-4 py-1 text-sm font-bold">
               {editorsPick[0].label}
             </span>
-            <a
-              href="#"
+            <Link
+              to="#"
               className="absolute bottom-4 left-4 bg-white px-4 py-1 text-sm font-bold hover:bg-[#23A6F0] hover:text-white transition"
             >
              MEN
-            </a>
+            </Link >
           </div>
 
           {/* WOMEN */}
@@ -70,12 +70,12 @@ const EditorsPick = () => {
             <span className="absolute bottom-4 left-4 bg-white px-4 py-1 text-sm font-bold">
               {editorsPick[1].label}
             </span>
-            <a
-              href="#"
+            <Link
+              to="#"
               className="absolute bottom-4 left-4 bg-white px-4 py-1 text-sm font-bold hover:bg-[#23A6F0] hover:text-white transition"
             >
               WOMEN
-            </a> 
+            </Link> 
           </div>
 
           {/* SAĞ KISIM */}
@@ -91,12 +91,12 @@ const EditorsPick = () => {
               <span className="absolute bottom-4 left-4 bg-white px-4 py-1 text-sm font-bold">
                 {editorsPick[2].label}
               </span>
-                <a
-                    href="#"    
+                <Link
+                    to="#"
                     className="absolute bottom-4 left-4 bg-white px-4 py-1 text-sm font-bold hover:bg-[#23A6F0] hover:text-white transition"
                 >
                     ACCESSORIES
-                </a>                              
+                </Link >                              
             </div>
 
             {/* KIDS */}
@@ -109,12 +109,12 @@ const EditorsPick = () => {
               <span className="absolute bottom-4 left-4 bg-white px-4 py-1 text-sm font-bold">
                 {editorsPick[3].label}
               </span>
-                <a
-                    href="#"
+                <Link
+                    to="#"
                     className="absolute bottom-4 left-4 bg-white px-4 py-1 text-sm font-bold hover:bg-[#23A6F0] hover:text-white transition"
                 >
                     KIDS
-                </a>
+                </Link>
             </div>
 
           </div>

@@ -1,80 +1,7 @@
 import ProductCard from "./ProductCard";
-
+import {products} from "../data/products";
 function BestsellerProducts() {
-  const products = [
-    {
-      id: 1,
-      image: "/images/product-1.jpg",
-      title: "Graphic Design",
-      department: "English Department",
-      oldPrice: "16.48",
-      price: "6.48",
-      colors: ["#23A6F0", "#2DC071", "#E77C40", "#252B42"],
-    },
-    {
-      id: 2,
-      image: "/images/product-2.jpg",
-      title: "Graphic Design",
-      department: "English Department",
-      oldPrice: "16.48",
-      price: "6.48",
-      colors: ["#23A6F0", "#2DC071", "#E77C40", "#252B42"],
-    },
-    {
-      id: 3,
-      image: "/images/product-3.jpg",
-      title: "Graphic Design",
-      department: "English Department",
-      oldPrice: "16.48",
-      price: "6.48",
-      colors: ["#23A6F0", "#2DC071", "#E77C40", "#252B42"],
-    },
-    {
-      id: 4,
-      image: "/images/product-4.jpg",
-      title: "Graphic Design",
-      department: "English Department",
-      oldPrice: "16.48",
-      price: "6.48",
-      colors: ["#23A6F0", "#2DC071", "#E77C40", "#252B42"],
-    },
-    {
-      id: 5,
-      image: "/images/product-5.jpg",
-      title: "Graphic Design",
-      department: "English Department",
-      oldPrice: "16.48",
-      price: "6.48",
-      colors: ["#23A6F0", "#2DC071", "#E77C40", "#252B42"],
-    },
-    {
-      id: 6,
-      image: "/images/product-6.jpg",
-      title: "Graphic Design",
-      department: "English Department",
-      oldPrice: "16.48",
-      price: "6.48",
-      colors: ["#23A6F0", "#2DC071", "#E77C40", "#252B42"],
-    },
-    {
-      id: 7,
-      image: "/images/product-7.jpg",
-      title: "Graphic Design",
-      department: "English Department",
-      oldPrice: "16.48",
-      price: "6.48",
-      colors: ["#23A6F0", "#2DC071", "#E77C40", "#252B42"],
-    },
-    {
-      id: 8,
-      image: "/images/product-8.jpg",
-      title: "Graphic Design",
-      department: "English Department",
-      oldPrice: "16.48",
-      price: "6.48",
-      colors: ["#23A6F0", "#2DC071", "#E77C40", "#252B42"],
-    },
-  ];
+  const bestSellers = products.filter((p) => p.isBestSeller);
 
   return (
     <section className="bg-[#FAFAFA] py-[80px]">
@@ -89,8 +16,8 @@ function BestsellerProducts() {
         </div>
 
         <div className="grid grid-cols-1 justify-items-center gap-y-[48px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {products.map((item) => (
-            <ProductCard key={item.id} product={item} />
+          {bestSellers.map((product) => (
+        <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </div>

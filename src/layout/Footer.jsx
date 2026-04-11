@@ -11,27 +11,27 @@ function Footer() {
           </h2>
 
           <div className="flex items-center gap-5">
-            <a href="#" aria-label="facebook">
+            <Link to="#" aria-label="facebook">
               <img
                 src="/icons/facebook-blue.svg"
                 alt="facebook"
                 className="h-6 w-6"
               />
-            </a>
-            <a href="#" aria-label="instagram">
+            </Link>
+            <Link to="#" aria-label="instagram">
               <img
                 src="/icons/instagram-blue.svg"
                 alt="instagram"
                 className="h-6 w-6"
               />
-            </a>
-            <a href="#" aria-label="twitter">
+            </Link>
+            <Link to="#" aria-label="twitter">
               <img
                 src="/icons/twitter-blue.svg"
                 alt="twitter"
                 className="h-6 w-6"
               />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -112,7 +112,7 @@ function Footer() {
                 IOS & Android
               </Link>
               <Link className="text-[14px] font-bold text-[#737373]" to="#">
-                Watch a Demo
+                Watch Link Demo
               </Link>
               <Link className="text-[14px] font-bold text-[#737373]" to="#">
                 Customers
