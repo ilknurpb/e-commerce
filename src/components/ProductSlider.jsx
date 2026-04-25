@@ -1,11 +1,15 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../store/actions/shoppingCartActions";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 function ProductSlider() {
+  const dispatch = useDispatch();
+
   const slides = [
     {
       id: 1,
@@ -15,7 +19,6 @@ function ProductSlider() {
       description:
         "We know how large objects will act, We know how are objects will act, We know",
       price: "$16.48",
-      buttonText: "ADD TO CART",
       bgColor: "#23856D",
     },
     {
@@ -26,10 +29,21 @@ function ProductSlider() {
       description:
         "We know how large objects will act, We know how are objects will act, We know",
       price: "$16.48",
-      buttonText: "ADD TO CART",
       bgColor: "#23856D",
     },
   ];
+
+  const sliderAddToCart = (slide) => {
+    const product = {
+      id: slide.id,
+      name: slide.title,
+      price: Number(slide.price.replace("$", "")),
+      image: slide.image,
+    };
+
+    console.log("sepete ekleniyor:", product);
+    dispatch(addToCart(product));
+  };
 
   return (
     <section className="w-full bg-white">
@@ -40,6 +54,8 @@ function ProductSlider() {
           pagination={{ clickable: true }}
           autoplay={{ delay: 3500, disableOnInteraction: false }}
           loop={true}
+          simulateTouch={false}
+          allowTouchMove={false}
           className="product-hero-swiper"
         >
           {slides.map((slide) => (
@@ -50,7 +66,7 @@ function ProductSlider() {
               >
                 <div className="mx-auto flex h-full max-w-[1050px] items-center justify-between px-6 py-[80px]">
                   {/* SOL YAZILAR */}
-                  <div className="z-10 max-w-[510px] text-white">
+                  <div className="relative z-[9999] max-w-[510px] text-white">
                     <p className="mb-8 text-[16px] font-bold leading-[24px] tracking-[0.1px]">
                       {slide.smallTitle}
                     </p>
@@ -68,8 +84,18 @@ function ProductSlider() {
                         {slide.price}
                       </span>
 
-                      <button className="rounded-[5px] bg-[#2DC071] px-10 py-[15px] text-[14px] font-bold leading-[22px] tracking-[0.2px] text-white transition hover:opacity-90">
-                        {slide.buttonText}
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          console.log("BUTONA BASILDI");
+                          sliderAddToCart(slide);
+                        }}
+                        onMouseDown={(e) => e.stopPropagation()}
+                        className="relative z-[9999] pointer-events-auto rounded-[5px] bg-[#2DC071] px-10 py-4 text-[14px] font-bold leading-[22px] tracking-[0.2px] text-white transition hover:bg-[#23a455]"
+                      >
+                        ADD TO CART
                       </button>
                     </div>
                   </div>

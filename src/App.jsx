@@ -19,8 +19,9 @@ import CartPage from "./pages/CartPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import CreateOrderPage from "./pages/CreateOrderPage";
 import PreviousOrdersPage from "./pages/PreviousOrdersPage";
-
-
+import BlogPage from "./pages/BlogPage";
+import BlogDetailPage from "./pages/BlogDetailPage";
+import PricingPage from "./pages/PricingPage";
 function App() {
   const dispatch = useDispatch();
 
@@ -42,11 +43,14 @@ function App() {
           />
           <Route exact path="/shop/:gender/:categoryName/:categoryId" component={ShopPage} />
           <Route exact path="/shop" component={ShopPage} />
+          <Route path="/blog/:id" component={BlogDetailPage} />
+          <Route path="/blog" component={BlogPage} />
           <Route exact path="/product/:id" component={ProductDetailPage} />
           <Route exact path="/cart" component={CartPage} />
           <Route exact path="/contact" component={ContactPage} />
           <Route path="/team" component={TeamPage} />
           <Route path="/about" component={AboutPage} />
+          <Route path="/pricing" component={PricingPage} />
           <Route exact path="/signup" component={SignupPage} />
           <Route exact path="/login" component={LoginPage} />
           <ProtectedRoute exact path="/create-order" component={CreateOrderPage} />

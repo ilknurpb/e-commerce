@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -62,9 +63,12 @@ function Slider() {
                     {slide.description}
                   </p>
 
-                  <button className="rounded-[5px] bg-[#2DC071] px-10 py-4 text-[24px] font-bold leading-[32px] tracking-[0.1px] text-white">
+                  <Link
+                    to="/shop"
+                    className="inline-block rounded-[5px] bg-[#2DC071] px-10 py-4 text-[24px] font-bold leading-[32px] tracking-[0.1px] text-white"
+                  >
                     {slide.buttonText}
-                  </button>
+                  </Link>
                 </div>
               </div>
             </SwiperSlide>

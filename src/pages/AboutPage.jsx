@@ -10,7 +10,6 @@ function AboutPage() {
     { id: 4, value: "100+", label: "Top Partners" },
   ];
 
-
   const brands = [
     "/icons/hooli.svg",
     "/icons/lyft.svg",
@@ -19,6 +18,16 @@ function AboutPage() {
     "/icons/aws.svg",
     "/icons/reddit.svg",
   ];
+
+  // 🔥 YENİ: TÜM RESİMLER URL'DEN
+  const aboutImages = {
+    hero:
+      "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?w=700&auto=format&fit=crop",
+    video:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&auto=format&fit=crop",
+    cta:
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=700&auto=format&fit=crop",
+  };
 
   return (
     <main className="bg-white">
@@ -47,13 +56,9 @@ function AboutPage() {
             <div className="relative mt-16 flex w-full justify-center md:mt-0 md:h-[520px] md:w-[600px]">
               <div className="absolute left-1/2 top-[28px] h-[320px] w-[320px] -translate-x-1/2 rounded-full bg-[#F7DCDC] md:left-auto md:right-[70px] md:top-[40px] md:h-[420px] md:w-[420px] md:translate-x-0"></div>
 
-              <div className="absolute left-[18px] top-[120px] h-[12px] w-[12px] rounded-full bg-[#977DF4] md:left-auto md:right-[470px] md:top-[340px]"></div>
-              <div className="absolute right-[26px] top-[104px] h-[14px] w-[14px] rounded-full bg-[#F7DCDC] md:right-[36px] md:top-[210px]"></div>
-              <div className="absolute right-[38px] top-[170px] h-[8px] w-[8px] rounded-full bg-[#977DF4] md:right-[10px] md:top-[120px]"></div>
-              <div className="absolute left-[8px] top-[88px] h-[28px] w-[28px] rounded-full bg-[#F7DCDC] md:left-auto md:right-[420px] md:top-[30px] md:h-[58px] md:w-[58px]"></div>
-
+              {/* 🔥 URL IMAGE */}
               <img
-                src="/images/about-hero.png"
+                src={aboutImages.hero}
                 alt="about hero"
                 className="relative z-10 h-[360px] object-contain md:absolute md:bottom-0 md:right-0 md:h-[520px]"
               />
@@ -62,42 +67,12 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* DESCRIPTION */}
-      <section className="mx-auto max-w-[390px] px-6 py-12 md:max-w-[1050px] md:px-8 md:py-20">
-        <div className="flex flex-col gap-10 text-center md:flex-row md:items-start md:justify-between md:text-left">
-          <div className="mx-auto max-w-[320px] md:mx-0 md:max-w-[280px]">
-            <p className="text-[14px] font-bold text-[#E74040]">Problems trying</p>
-
-            <h2 className="mt-4 text-[24px] font-bold leading-[32px] text-[#252B42] md:text-[24px]">
-              Met minim Mollie non desert Alamo est sit cliquey dolor do met sent.
-            </h2>
-          </div>
-
-          <p className="mx-auto max-w-[320px] text-[14px] leading-5 text-[#737373] md:mx-0 md:max-w-[530px]">
-            Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics
-          </p>
-        </div>
-      </section>
-
-      {/* STATS */}
-      <section className="mx-auto max-w-[390px] px-6 py-8 md:max-w-[1050px] md:px-8 md:py-8">
-        <div className="flex flex-col items-center gap-16 md:flex-row md:justify-between md:gap-8">
-          {stats.map((item) => (
-            <div key={item.id} className="text-center">
-              <h3 className="text-[58px] font-bold leading-[80px] text-[#252B42]">
-                {item.value}
-              </h3>
-              <p className="text-[16px] font-bold text-[#737373]">{item.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* VIDEO */}
       <section className="mx-auto max-w-[390px] px-6 py-16 md:max-w-[1050px] md:px-8 md:py-16">
         <div className="relative overflow-hidden rounded-[20px]">
+          {/* 🔥 URL IMAGE */}
           <img
-            src="/images/about-video.jpg"
+            src={aboutImages.video}
             alt="video cover"
             className="h-[316px] w-full object-cover md:h-[540px]"
           />
@@ -109,26 +84,25 @@ function AboutPage() {
       </section>
 
       {/* TEAM */}
-<section className="mx-auto max-w-[390px] px-6 py-20 md:max-w-[1050px] md:px-8 md:py-20">
-  <div className="text-center">
-    <h2 className="text-[40px] font-bold leading-[50px] text-[#252B42]">
-      Meet Our Team
-    </h2>
+      <section className="mx-auto max-w-[390px] px-6 py-20 md:max-w-[1050px] md:px-8 md:py-20">
+        <div className="text-center">
+          <h2 className="text-[40px] font-bold leading-[50px] text-[#252B42]">
+            Meet Our Team
+          </h2>
 
-    <p className="mx-auto mt-4 max-w-[300px] text-[14px] leading-5 text-[#737373] md:max-w-[470px]">
-      Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics
-    </p>
-  </div>
+          <p className="mx-auto mt-4 max-w-[300px] text-[14px] leading-5 text-[#737373] md:max-w-[470px]">
+            Problems trying to resolve the conflict between the two major realms of Classical physics.
+          </p>
+        </div>
 
-  {/* KARTLAR */}
-  <div className="mt-12 flex flex-col items-center gap-10 md:flex-row md:justify-center md:gap-8">
-    {teamData.slice(0, 3).map((member) => (
-      <div key={member.id} className="w-full max-w-[316px]">
-        <TeamCard member={member} />
-      </div>
-    ))}
-  </div>
-</section>
+        <div className="mt-12 flex flex-col items-center gap-10 md:flex-row md:justify-center md:gap-8">
+          {teamData.slice(0, 3).map((member) => (
+            <div key={member.id} className="w-full max-w-[316px]">
+              <TeamCard member={member} />
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* BRANDS */}
       <section className="bg-[#FAFAFA]">
@@ -139,7 +113,7 @@ function AboutPage() {
             </h2>
 
             <p className="mx-auto mt-4 max-w-[320px] text-[14px] leading-5 text-[#737373] md:max-w-[470px]">
-              Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics
+              Problems trying to resolve the conflict between the two major realms.
             </p>
           </div>
 
@@ -157,7 +131,7 @@ function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="mx-auto max-w-[390px] px-0 py-0 md:max-w-[1440px]">
+      <section className="mx-auto max-w-[390px] md:max-w-[1440px]">
         <div className="bg-[#2A7CC7] px-6 py-16 text-center text-white md:mx-auto md:flex md:max-w-[1050px] md:items-stretch md:px-0 md:py-0">
           <div className="flex flex-col md:w-1/2 md:justify-center md:px-16 md:py-20 md:text-left">
             <p className="text-[14px] font-bold">WORK WITH US</p>
@@ -166,8 +140,8 @@ function AboutPage() {
               Now Let’s grow Yours
             </h2>
 
-            <p className="mx-auto mt-6 max-w-[240px] text-[14px] leading-5 md:mx-0 md:max-w-[350px]">
-              The gradual accumulation of information about atomic and small-scale behavior during the first quarter of the 20th
+            <p className="mt-6 text-[14px] leading-5 md:max-w-[350px]">
+              The gradual accumulation of information about atomic and small-scale behavior.
             </p>
 
             <button className="mt-8 inline-flex w-fit self-center rounded-[5px] border border-white px-10 py-3 text-[14px] font-bold text-white md:self-start">
@@ -175,9 +149,10 @@ function AboutPage() {
             </button>
           </div>
 
+          {/* 🔥 URL IMAGE */}
           <div className="hidden md:block md:w-1/2">
             <img
-              src="/images/about-cta.jpg"
+              src={aboutImages.cta}
               alt="cta"
               className="h-full w-full object-cover"
             />

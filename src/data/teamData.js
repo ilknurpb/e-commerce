@@ -4,7 +4,7 @@ export const teamData = [
     name: "Gökhan Özdemir",
     role: "Project Manager",
     image:
-      "https://media.licdn.com/dms/image/v2/D4D03AQG_placeholder/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400.jpg",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ export const teamData = [
     name: "Team Member",
     role: "Frontend Developer",
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600",
+      "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=400&auto=format&fit=crop",
   },
   {
     id: 4,

@@ -13,34 +13,49 @@ function ContactPage() {
             of Classical physics:
           </p>
 
-          <button className="mt-6 rounded-[5px] bg-[#23A6F0] px-6 py-3 text-[14px] font-bold text-white md:mt-8">
+          <a
+            href="mailto:info@bandage.com"
+            className="mt-6 rounded-[5px] bg-[#23A6F0] px-6 py-3 text-[14px] font-bold text-white md:mt-8"
+          >
             CONTACT OUR COMPANY
-          </button>
+          </a>
 
           <div className="mt-6 flex items-center gap-4 md:mt-8">
             <a
-              href="#"
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F5F5F5] transition hover:scale-110 hover:bg-black"
             >
               <img src="/icons/twitter.svg" alt="Twitter" className="h-4 w-4" />
             </a>
 
             <a
-              href="#"
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F5F5F5] transition hover:scale-110 hover:bg-[#1877F2]"
             >
               <img src="/icons/facebook.svg" alt="Facebook" className="h-4 w-4" />
             </a>
 
             <a
-              href="#"
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F5F5F5] transition hover:scale-110 hover:bg-[#E4405F]"
             >
               <img src="/icons/instagram.svg" alt="Instagram" className="h-4 w-4" />
             </a>
 
             <a
-              href="#"
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F5F5F5] transition hover:scale-110 hover:bg-[#0A66C2]"
             >
               <img src="/icons/linkedin.svg" alt="LinkedIn" className="h-4 w-4" />
@@ -65,9 +80,12 @@ function ContactPage() {
               realms of Classical physics:
             </p>
 
-            <button className="mt-5 text-[14px] font-bold text-[#23A6F0]">
+            <a
+              href="mailto:info@bandage.com"
+              className="mt-5 text-[14px] font-bold text-[#23A6F0]"
+            >
               CONTACT US
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -84,7 +102,6 @@ function ContactPage() {
           }}
         >
           <div className="grid grid-cols-1 px-8 py-12 text-white md:grid-cols-2 md:px-14 md:py-16">
-            {/* LEFT */}
             <div className="flex items-start md:items-center">
               <div className="max-w-[260px]">
                 <h2 className="text-[32px] font-bold leading-[40px] md:text-[40px] md:leading-[50px]">
@@ -96,13 +113,15 @@ function ContactPage() {
                   realms of Classical physics: Newtonian mechanics
                 </p>
 
-                <button className="mt-6 rounded-[5px] bg-[#23A6F0] px-6 py-3 text-[14px] font-bold text-white">
+                <a
+                  href="mailto:info@bandage.com"
+                  className="mt-6 inline-block rounded-[5px] bg-[#23A6F0] px-6 py-3 text-[14px] font-bold text-white"
+                >
                   CONTACT US
-                </button>
+                </a>
               </div>
             </div>
 
-            {/* RIGHT */}
             <div className="mt-10 grid grid-cols-1 justify-items-center gap-y-10 sm:grid-cols-2 md:mt-0 md:justify-items-start">
               <div className="max-w-[220px] text-center md:text-left">
                 <h3 className="text-[24px] font-bold">Paris</h3>
@@ -112,7 +131,7 @@ function ContactPage() {
                   <br />
                   75000 Paris
                   <br />
-                  Phone : +451 215 215
+                  Phone : <a href="tel:+451215215">+451 215 215</a>
                   <br />
                   Fax : +451 215 215
                 </p>
@@ -126,7 +145,7 @@ function ContactPage() {
                   <br />
                   75000 Paris
                   <br />
-                  Phone : +451 215 215
+                  Phone : <a href="tel:+451215215">+451 215 215</a>
                   <br />
                   Fax : +451 215 215
                 </p>
@@ -140,7 +159,7 @@ function ContactPage() {
                   <br />
                   75000 Paris
                   <br />
-                  Phone : +451 215 215
+                  Phone : <a href="tel:+451215215">+451 215 215</a>
                   <br />
                   Fax : +451 215 215
                 </p>
@@ -154,7 +173,7 @@ function ContactPage() {
                   <br />
                   75000 Paris
                   <br />
-                  Phone : +451 215 215
+                  Phone : <a href="tel:+451215215">+451 215 215</a>
                   <br />
                   Fax : +451 215 215
                 </p>
@@ -167,7 +186,6 @@ function ContactPage() {
       {/* CONTACT SECTION 4 */}
       <section className="px-4 pb-14 md:pb-20">
         <div className="mx-auto grid max-w-[1050px] overflow-hidden md:grid-cols-[1.2fr_0.8fr]">
-          {/* LEFT */}
           <div className="flex items-center bg-[#2A7CC7] px-8 py-12 text-white md:px-14 md:py-16">
             <div className="max-w-[320px]">
               <p className="text-[12px] font-bold uppercase tracking-wide md:text-[14px]">
@@ -183,13 +201,15 @@ function ContactPage() {
                 small-scale behavior during the first quarter of the 20th
               </p>
 
-              <button className="mt-6 rounded-[5px] border border-white px-6 py-3 text-[14px] font-bold text-white md:mt-8">
+              <a
+                href="mailto:info@bandage.com"
+                className="mt-6 inline-block rounded-[5px] border border-white px-6 py-3 text-[14px] font-bold text-white md:mt-8"
+              >
                 Button
-              </button>
+              </a>
             </div>
           </div>
 
-          {/* RIGHT */}
           <div className="hidden md:block">
             <img
               src="/images/contact-woman.jpg"
