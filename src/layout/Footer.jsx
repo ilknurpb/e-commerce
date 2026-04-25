@@ -45,17 +45,29 @@ function Footer() {
               Company Info
             </h3>
             <div className="flex flex-col gap-[10px]">
-              <Link className="text-[14px] font-bold text-[#737373]" to="#">
+              <Link
+                className="text-[14px] font-bold text-[#737373]"
+                to="/about"
+              >
                 About Us
               </Link>
-              <Link className="text-[14px] font-bold text-[#737373]" to="#">
-                Carrier
+              <Link
+                className="text-[14px] font-bold text-[#737373]"
+                to="/team"
+              >
+                Team
               </Link>
-              <Link className="text-[14px] font-bold text-[#737373]" to="#">
-                We are hiring
+              <Link
+                className="text-[14px] font-bold text-[#737373]"
+                to="/pricing"
+              >
+                Pricing
               </Link>
-              <Link className="text-[14px] font-bold text-[#737373]" to="#">
-                Blog
+              <Link
+                className="text-[14px] font-bold text-[#737373]"
+                to="/contact"
+              >
+                Contact
               </Link>
             </div>
           </div>
